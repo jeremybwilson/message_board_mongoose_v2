@@ -1,0 +1,39 @@
+<% include partials/header %>
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    <% include partials/nav %>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col">
+                    <h1>Welcome to the <%= title %></h1><hr />
+                    <h3>Write a message to get started!</h3>
+                    <form id="message_form" action="message" method="POST" class="m-1">
+                        <div class="form-group m-1">
+                            <label for="name" class="col-3">Name:</label>
+                            <div class="col">
+                                <input type="text" id="name" class="form-control" name="name">
+                            </div>
+                        </div>
+                        <div class="form-group m-1">
+                            <label for="quote" class="col-3">Message:</label>
+                            <div class="col">
+                                <textarea class="form-control" id="message" name="message"></textarea>
+                            </div>
+                        </div>
+                        <div class="form-row d-flex justify-content-end m-2">
+                            <button class="post_msg_btn btn btn-outline-primary">Post Message</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <div class="row">
+                <div id="flash_msg" class="col-6"></div>
+            </div>
+            <div class="row">
+                <div id="messageboard" class="col"></div>
+                <!-- <div id="flash_msg" class="col-2"></div> -->
+            </div>
+        </div>
+<% include partials/footer %>
